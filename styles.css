@@ -1,0 +1,177 @@
+/* styles.css */
+
+body {
+ 
+ background-color:#4CAFCD;
+{
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+}
+header h1{
+	margin-top:8px;
+	margin-bottom:0px;
+	padding:6px;	
+	font-size:22px;
+	
+
+}
+footer{
+	clear:both;
+	background-color:#FFFFFF;
+	text-align:center;
+	color:#69969;
+}
+	header{
+	clear:both;
+	text-align:center;
+	background-color:#FFFFFF;
+	color:#696969;
+	}
+}
+#col1 {
+	border: 1px dashed;
+}
+#col2 {
+	background-color: #FBFAFB;
+}
+#col3 {
+	background-color: #F7F9F8;
+}
+* {box-sizing:border-box}
+
+
+@media only screen and (min-width: 600px) {
+	header h1 { font-size: 48px; }
+	h1 { font-size: 32px;}
+	h2 { font-size: 24px;}
+	p { font-size: 16px;}
+}
+
+@media only screen and (min-width: 768px) {
+	header h1 { font-size: 60px; }
+	h1 { font-size: 40px;}
+	h2 { font-size: 30px;}
+	p { font-size: 20px;}
+}	
+{box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;
+
+    
+    
+    width:  200px;
+    height: 200px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 400px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4CAFCD;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.pad {
+	padding:10px;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

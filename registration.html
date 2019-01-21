@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html>
+<head>
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="style_h.css" rel="stylesheet" type="text/css">
+<link href="style_an.css" rel="stylesheet" type="text/css">
+<link href="style_register.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="nav.css" rel="stylesheet" type="text/css">
+
+<link href="rwd.css" rel="stylesheet" type="text/css">
+
+
+  <meta charset="utf-8">
+<title>Membership </title>
+<header>
+      <img src="logo.jpg" style="width:10%">
+    	<h1>Townsville Community Music Center</h1>
+    </header>
+    <ul class="top-level-menu" id="top_menu">
+    	<li><a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a></li>
+        <li>
+        	<a href="events.html" id="1" onClick="nav_item_selected(1)">Events</a>
+        	
+    	</li>
+    	<li><a href="#" id="2" onClick="nav_item_selected(2)">Artists</a></li>
+       <li>
+        	<a href="registration.html" id="3" onClick="nav_item_selected(1)">Membership</a>
+            <li>
+        	<a href="#" id="4" onClick="nav_item_selected(1)">Bulletin Board</a>
+        	
+      
+    	<li><a href="#" id="5" onClick="nav_item_selected(3)">About Us</a></li>
+	</ul> 
+    <div style="height: 0px; clear: both;"></div>
+  <body onLoad="run_first()">
+ <form action="action_page.html" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Registration</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="Name" required>
+    
+    
+     <label for="Contact"><b>Contact</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="Contact"  pattern="[0-9]{10}" required></p>
+
+    <label for="phone"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+    
+      <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="email" required>
+    
+
+    
+
+    <p><b> Please note that Individual membership $25 per year.</b></p>
+
+    <div class="clearfix">
+   
+     <button type="submit" class="signupbtn">Register</button>
+    </div>
+  </div>
+</form>
+</body>
+<footer>
+
+<center>
+<h3>Townsville Community Music Center </h3>
+</center></footer>	
+</body>
+</html>
+  
