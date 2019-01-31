@@ -1,0 +1,12 @@
+[29-Jan-2019 21:26:54 CST6CDT] PHP Parse error:  syntax error, unexpected 'head' (T_STRING), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/display.php on line 42
+[29-Jan-2019 22:46:45 CST6CDT] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 29
+[29-Jan-2019 22:49:53 CST6CDT] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 29
+[29-Jan-2019 22:49:55 CST6CDT] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 29
+[29-Jan-2019 22:53:48 CST6CDT] PHP Parse error:  syntax error, unexpected '$date' (T_VARIABLE), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 23
+[29-Jan-2019 22:56:04 CST6CDT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 24
+[29-Jan-2019 22:59:50 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in /home/ictatjcu/public_html/portal/view_admin/display-data.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 46
+[29-Jan-2019 23:00:38 CST6CDT] PHP Recoverable fatal error:  Object of class DateTime could not be converted to string in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 22
+[29-Jan-2019 23:02:19 CST6CDT] PHP Parse error:  syntax error, unexpected 'text' (T_STRING), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/display-data.php on line 11

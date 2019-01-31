@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>About</title>
-
-<link href="aboutusstyles.css" rel="stylesheet" type="text/css">
+<title>Book Appointment</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="bookjs.js" type="text/javascript"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 <header>
 
@@ -23,32 +23,58 @@
     <li><a href="Book.html">Book Appointment</a></li>
     <li><a href="aboutus.html">About</a></li>
     </ul>
-    </div>
+    </div>    
+
+
+<form id="form1" action="" method ="post" onSubmit="validate()">
+<div>
+<h1>Enter you contact details to schedule an appointment below </h1>
+
+<br><br>
+<div>
+<label> Student Name - </label>
+<input id ="name" placeholder="Enter Your Full Name" type="text" size="50">
+</div>
+
+<div>
+<label> Student ID - </label>
+<input id ="sid" placeholder="Enter JCU Student no." type="text" size="50">
+</div>
+
+<div>
+<label> Email - </label>
+<input id ="email" placeholder="example@my.jcu.edu.au" type="text" size="50">
+</div>
+
+<div>
+<label> Contact No.- </label>
+<input id ="contact" placeholder="Enter Contact No." type="text" size="50">
+</div>
+<br>
+<div id="form2">
+<label> Time length - </label>
+   <select name="Time">
    
-
- <div class="About">
- 	<h1> Brett Vance</h1>
-    <span class="border"></span>
- <div class="ps">
- 	<a href="#BrettVance"><img src="BrettVance.jpg" alt=""></a>
-    
+    <option value="f">15 min</option>
+    <option value="t">30 min</option>
+  </select>
 </div>
 
-<div class="section" id="BrettVance">
-	<span class="border"></span>
-    <br><br>
-	<p>Brett gives practical advice and strategies to assist students at all levels in all courses.
+<div>
+<label> Purpose of the Appointment - </label>
+<textarea name="reason" placeholder="Enter the reason for your appointment" type="text" rows="5" cols="50"></textarea>
+</div>
+<div id="Submit1">
 
-He can help you understand tasks and give you advice on how to improve your assignments.
+<input type="submit" value="Submit"  width="100" height="100">
+</div> 
 
-In addition to the wide range of support services at JCU Brisbane, Brett offers specialist learning support and activities to ensure that you reach your full academic potential while you're studying at JCU Brisbane.
-    </p>
-    
-
+</form>
 </div>
 </div>
+
 </header>
-</body>
+
 
 <div class ="footer-main-div">
 <div class ="footer-icons">
@@ -74,5 +100,7 @@ In addition to the wide range of support services at JCU Brisbane, Brett offers 
     </ul>
 </div>
 
+
+</body>
 
 </html>
