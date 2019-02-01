@@ -1,4 +1,4 @@
-<html><body><table border=1 cellspacing=1 cellpadding=2><tr align="center">
+<html><body><table border=2 cellspacing=1 cellpadding=1><tr align="center">
 
 <body>
 
@@ -6,57 +6,21 @@
 
 echo "<style >
 
-
-
-thead, tfoot {
-
-  background: black;
-
-  color: white;
-
-  text-shadow: 1px 1px 1px black;
-
+table, th, td {
+  border: 1px solid black;
 }
 
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
 
-
-thead th, tfoot th, tfoot td {
-
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
-
-  border: 3px solid purple;
-
+h3 {
+	text-align:center;
+    font-size: 24px;
+    line-height: 40px;
 }
 
-tbody tr:nth-child(odd) {
-
-  background-color: #ff33cc;
-
-}
-
-
-
-tbody tr:nth-child(even) {
-
-  background-color: #e495e4;
-
-}
-
-
-
-tbody tr {
-
-  background-image: white;
-
-}
-
-
-
-table {
-
-  background-color: #ff33cc;
-
-}
 
 
 
@@ -66,17 +30,26 @@ require "config.php"; // Database Connection
 
 $date=$_GET['selectedDate'];
 
+echo"<h3> Appointments on ";  echo $date;
+echo"</h3>";
+
 $date = new DateTime($date);
+
+
+
 
 $date=$date->format('Y-m-d');
 
 
 
+
+
+
 //echo $date;
 
-$sql="select * from Student where Date ='$date'";
+$sql="select * from Bookings where b_date ='$date'";
 
-echo "<table width=1000>";
+echo "<table width=2000>";
 
 echo "<tr>";
 
@@ -84,11 +57,17 @@ echo "<tr>";
 
             echo"<td>Email</td>";
 
-            echo"<td>Time</td>";
+            echo"<td>Start Time</td>";
+			
+			echo"<td>End Time</td>";
 
             echo"<td>Purpose</td>"; 
+			
+			 echo"<td>Type</td>"; 
 
         echo"</tr>";
+		
+	
 
 
 
@@ -96,13 +75,18 @@ foreach ($dbo->query($sql) as $row) {
 
 echo"<tr>";
 
-           echo "<td>$row[Name]</td>
+           echo "<td>$row[b_name]</td>
 
-            <td>$row[Email]</td>
+            <td><a href=mailto:$row[b_email]>$row[b_email]</td>
 
-            <td>$row[Time]</td>
+            <td>$row[b_starttime]</td>
+			
+			<td>$row[b_endtime]</td>
 
-            <td>$row[Purpose]</td> 
+            <td>$row[b_purpose]</td>
+			
+			<td>$row[b_type]</td>
+			 
 
 
 

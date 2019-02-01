@@ -51,8 +51,9 @@
 .ui-datepicker-current-day{
     background-color:red;
 }
+
 .ui-state-highlight{
-    background-color:orange;
+    background-color:green;
 }
 
 
@@ -168,15 +169,19 @@ $(function() {
 	$("#Datepicker1").datepicker({ minDate:new Date(),
 
 		numberOfMonths:1,firstDay: 1,onSelect:function() {
+		
+			
 			
 
 
 
-selectedDate = $('#date_picker').val(); }
+select_date = $('#date_picker').val(); 
+var url="display-data.php?selectedDate="+selectedDate;
+}
 
 
 
-
+ec
 		
 
 	}); 
@@ -190,6 +195,7 @@ selectedDate = $('#date_picker').val(); }
 
 
   </script>
+  <h3> Date you selected </h3> select_date
 
 <input type="submit" id="submit" value="BOOK"/>
 
