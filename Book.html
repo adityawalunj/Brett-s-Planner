@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Book Appointment</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="bookjs.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<header>
+
+<div class = "wrapper">
+	<div class = "logo">
+    <img src = "JCU Logo.png" alt="JCU Campus Logo">
+    
+    </div>
+    
+	<ul class ="nav-area">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="check_availability1.html">Availability</a></li>
+    <li><a href="Book.html">Book Appointment</a></li>
+    <li><a href="aboutus.html">About</a></li>
+    </ul>
+    </div>    
+
+
+<form id="form1" action="" method ="post" onSubmit="validate()">
+<div>
+<h1>Enter you contact details to schedule an appointment below </h1>
+
+<br><br>
+<div>
+<label> Student Name - </label>
+<input id ="name" placeholder="Enter Your Full Name" type="text" size="100">
+</div>
+
+<div>
+<label> Student ID - </label>
+<input id ="sid" placeholder="Enter JCU Student no." type="text" size="50">
+</div>
+
+<div>
+<label> Email - </label>
+<input id ="email" placeholder="example@my.jcu.edu.au" type="text" size="50">
+</div>
+
+<div>
+<label> Contact No.- </label>
+<input id ="contact" placeholder="Enter Contact No." type="text" size="50">
+</div>
+<br>
+<!--    
+<div id="form2">
+<br>
+<label> Time length - </label>
+   <select name="Time">
+   
+    <option value="f">15 min</option>
+    <option value="t">30 min</option>
+  </select>
+</div>
+-->
+<div>
+<label> Purpose of the Appointment - </label>
+<textarea name="reason" placeholder="Enter the reason for your appointment" type="text" rows="5" cols="50"></textarea>
+</div>
+<div id="Submit1">
+
+<input type="submit" value="Submit"  width="100" height="100">
+</div> 
+    </div>
+</form>
+    </header>
+
+
+<div class ="footer-main-div">
+<div class ="footer-icons">
+<ul>
+	
+    <li><a href="https://www.facebook.com/JCUBrisbane/" ><i class="fa fa-facebook"></i></a></li>
+    <li><a href="https://twitter.com/jcubrisbane?lang=en" ><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://www.instagram.com/jcubrisbane/?hl=en" ><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/brett-vance-63869b92/" ><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="https://www.youtube.com/channel/UCdEQAn1al8CdJhEOYcDOOeQ" ><i class="fa fa-youtube"></i></a></li>
+</ul>
+</div>
+
+<div class="footer-menu">
+    <ul>
+    	<li><a href="Home.html">Home</a></li>
+        <li><a href="https://www.jcub.edu.au/">JCUB</a></li>
+        <li><a href="https://www.jcub.edu.au/current-students/the-learning-hub/library/">Library</a></li>
+        <li><a href="https://www.jcub.edu.au/about/staff/student-services/">Services</a></li>
+        <li><a href="https://www.jcub.edu.au/current-students/the-learning-hub/learning-advisors/">Advisors</a></li>
+        <li><a href="https://www.jcub.edu.au/current-students/the-learning-hub/learning-workshops/">Workshops</a></li>
+        <li><a href="https://www.jcub.edu.au/contact/">Contact</a></li> 
+    </ul>
+</div>
+    </div>
+
+</body>
+
+</html>

@@ -8,17 +8,22 @@
 }
 
 .About{
-	overflow:hidden;
+	
 	text-align:center;
-	background: #34495e;
-	padding:60px;
+	
+	padding:120px;
+}
+
+h1 {
+	text-align:center;
 }
 
 .About h1{
 	text-transform:uppercase;
-	margin-bottom:60px;
+	margin-bottom:50px;
 	color: white;
 	font-size:40px;
+	
 }
 
 .border{
