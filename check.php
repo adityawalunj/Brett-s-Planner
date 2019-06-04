@@ -1,8 +1,13 @@
-<?Php
++<?Php
 
+require "head.php";
+require "config.php";
 
-
-
+$NAME=$_REQUEST['name1'];
+$ID=$_REQUEST['id1'];
+$EMAIL=$_REQUEST['email'];
+$MOBILE=$_REQUEST['phone'];
+$REASON=$_REQUEST['reason'];
 
 
 
@@ -18,7 +23,7 @@ echo "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-125
 
 
 
-<title>View Calendar Admin</title>
+<title>Check Availability</title>
 
 
 
@@ -34,22 +39,16 @@ echo "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-125
 
 
 
-
 ";
+
+
 
 require "head.php";
 
 
-
-
-
-
-
 echo "<style >
 
-
-
-
+.ui-widget { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 30px;   }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 
@@ -59,26 +58,17 @@ echo "<style >
 
 }
 
-.ui-widget { font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; font-size: 40px;   }
-
 .ui-state-disabled .ui-state-default {
 
-    color: white;
-	
-	
+    color: red;
 
-
-    background: grey;
+    background: Black;
 
 }
 
-.ui-datepicker-week-end a {
-   background-color: grey;
-   color: grey !important;
-}
 
 
-<?php include 'rwd.css'; ?>
+#ui-datepicker-div { font-size:40px; }
 
 
 
@@ -86,7 +76,7 @@ echo "<style >
 
 
 
-    background-color: grey !important;
+    background-color: Red !important;
 
 
 
@@ -100,11 +90,6 @@ echo "<style >
 
 }
 
-.ui-datepicker-week-end a {
-   background-color: grey;
-}
-
-     
 
 
 </style></head><body>";
@@ -138,10 +123,11 @@ require "config.php"; // Database Connection
 ?>
 
 
-
 <div class="col-6 col-s-6">
+	<h3><b>Select the day to check the avialability</b></h3> 
 <div id="date_picker"></div>
 <br><br><br>
+</div>
 
 
 
@@ -181,7 +167,7 @@ function checkDate(selectedDate) {
 
 
 
-$q="select distinct date_format( b_date, '%d-%m-%Y' ) as b_date from Bookings";
+$q="select distinct date_format( Date, '%d-%m-%Y' ) as Date from Student";
 
 
 
@@ -197,7 +183,7 @@ foreach ($dbo->query($q) as $row) {
 
 
 
-$str.="\"$row[b_date]\",";
+$str.="\"$row[Date]\",";
 
 
 
@@ -317,14 +303,15 @@ $(function() {
 
 
 
+dateFormat: 'dd-mm-yy',
 
-dateFormat: 'dd-mm-yy', firstDay: 1, minDate: new Date(),
+minDate:new Date(),
 
+				beforeShowDay:function (dt) {
 
+    return [dt.getDay() == 0 || dt.getDay() == 6 ? false : true];
 
-
-
-beforeShowDay:checkDate,
+				},
 
 
 
@@ -336,7 +323,7 @@ selectedDate = $('#date_picker').val();
 
 
 
-var url="display-data.php?selectedDate="+selectedDate;
+var url="avail_process.php?selectedDate="+selectedDate;
 
 
 
@@ -366,7 +353,7 @@ $('#d1').load(url);
 
 </script>
 
-</div>
+
 
 
 

@@ -1,16 +1,16 @@
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Book Appointment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brett's Planner Home Page</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script src="bookjs.js" type="text/javascript"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 <header>
-
 <div class = "wrapper">
 	<div class = "logo">
     <img src = "JCUB.png" alt="JCU Campus Logo">
@@ -21,60 +21,90 @@
     <li><a href="Home.html">Home</a></li>
     <li><a href="check_availability1.html">Availability</a></li>
     <li><a href="Book.html">Book Appointment</a></li>
+    <li><a href="managebookings.html">Manage Bookings</a></li>
     <li><a href="aboutus.html">About</a></li>
+        
     </ul>
-    </div>    
-
-
-<form id="RegForm" action="/submit.php" onsubmit="return validate()" method="post">
-    
-<div>
-<h1>Enter you contact details to schedule an appointment below </h1>
-
-<br><br>
-<div>
-<label> Student Name - </label>
-<input id ="Name" placeholder="Enter Your Full Name" type="text" size="50">
-</div>
-
-<div>
-<label> Student ID - </label>
-<input id ="Sid" placeholder="Enter JCU Student no." type="text" size="50">
-</div>
-
-<div>
-<label> Email - </label>
-<input id ="Email" placeholder="yourname@my.jcu.edu.au" type="text" size="50">
-</div>
-
-<div>
-<label> Contact No.- </label>
-<input id ="Contact" placeholder="Enter Contact No." type="text" size="50">
-</div>
-<br>
-<!--    
-<div id="form2">
-<br>
-<label> Time length - </label>
-   <select name="Time">
-   
-    <option value="f">15 min</option>
-    <option value="t">30 min</option>
-  </select>
-</div>
--->
-<div>
-<label> Purpose of the Appointment - </label>
-<textarea name="Reason" placeholder="Enter the reason for your appointment" type="text" rows="5" cols="50"></textarea>
-</div>
-<div id="SubmitButtons">
-
-<input type="submit" value="Submit"  width="100" height="100">
-    <input type="reset" value="Reset" width="100" height="100">
-</div> 
     </div>
-</form>
+    <div>
+<script>
+function myFunction() {
+  var retVal = confirm("Do you want to continue ?");
+               if( retVal == true ) {
+                                  return true;
+               } else {
+                  document.write ("Your appoinment is NOT CANCELLED ");
+                  return false;
+               }
+}
+</script>
+
+<?php
+
+require "head.php";
+
+require "config.php";
+
+$bookingid=$_POST["man"];
+
+$emailid=$_POST["email"];
+
+$sql="select * from Bookings where b_id='$bookingid' AND b_email='$emailid'";
+
+$result1 = $dbo->query($sql);
+
+$row = $result1->fetch();
+
+if ($row) 
+
+{
+$result = $dbo->query($sql);
+
+echo "<h2> Your booking details </h2>";
+
+foreach ($result as $row) 
+
+{
+
+echo" NAME: $row[b_name]
+
+<br>EMAIL:$row[b_email]";
+
+$date = new DateTime($row[b_date]);
+
+$date=$date->format('d-m-Y');
+
+echo"<br>DATE:$date
+
+<br>TIME: $row[b_starttime]
+
+<br><form action =delprocess.php?man=$bookingid  method = POST> 
+
+<input type=submit onclick=myFunction() value=Cancel> </form>
+
+<button><a href=manage1.php>Back</a></button>";
+
+}
+
+}
+
+else
+
+{
+
+echo "<h2> Please check the Booking id and Mail id </h2>
+<button><a href=manage1.php>Back to Manage Booking</a></button>";
+
+
+
+
+}
+
+?>
+    </div>
     </header>
+
+
 
 
 <div class ="footer-main-div">
@@ -88,7 +118,6 @@
     <li><a href="https://www.youtube.com/channel/UCdEQAn1al8CdJhEOYcDOOeQ" ><i class="fa fa-youtube"></i></a></li>
 </ul>
 </div>
-
 <div class="footer-menu">
     <ul>
     	<li><a href="Home.html">Home</a></li>
@@ -97,12 +126,20 @@
         <li><a href="https://www.jcub.edu.au/about/staff/student-services/">Services</a></li>
         <li><a href="https://www.jcub.edu.au/current-students/the-learning-hub/learning-advisors/">Advisors</a></li>
         <li><a href="https://www.jcub.edu.au/current-students/the-learning-hub/learning-workshops/">Workshops</a></li>
-        <li><a href="https://www.jcub.edu.au/contact/">Contact</a></li>
+        <li><a href="https://www.jcub.edu.au/contact/">Contact</a></li> 
         <li><a href="privacy.html">Privacy Policy</a></li> 
     </ul>
 </div>
-    </div>
+
+</div>
+
+
 
 </body>
 
+
 </html>
+
+
+
+
