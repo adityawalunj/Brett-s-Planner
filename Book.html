@@ -13,7 +13,7 @@
 
 <div class = "wrapper">
 	<div class = "logo">
-    <img src = "JCUB.png" alt="JCU Campus Logo">
+    <a href="https://www.jcub.edu.au/"><img src = "JCUB.png" alt="JCU Campus Logo"></a>
     
     </div>
     
@@ -21,12 +21,13 @@
     <li><a href="Home.html">Home</a></li>
     <li><a href="check_availability1.html">Availability</a></li>
     <li><a href="Book.html">Book Appointment</a></li>
-    <li><a href="aboutus.html">About</a></li>
+    <li><a href="managebookings.html">Manage Bookings</a></li>
+    <li><a href="aboutus.html">About</a></li> 
     </ul>
     </div>    
 
 
-<form id="RegForm" action="/submit.php" onsubmit="return validate()" method="post">
+<form id="RegForm" action="/view_admin/check.php" onsubmit="return validate()" method="post">
     
 <div>
 <h1>Enter you contact details to schedule an appointment below </h1>
@@ -34,22 +35,22 @@
 <br><br>
 <div>
 <label> Student Name - </label>
-<input id ="Name" placeholder="Enter Your Full Name" type="text" size="50">
+<input id ="Name" type="text" size="30" style="font-size:16pt">
 </div>
 
 <div>
 <label> Student ID - </label>
-<input id ="Sid" placeholder="Enter JCU Student no." type="text" size="50">
+<input id ="Sid"  type="text" size="30" style="font-size:16pt">
 </div>
 
 <div>
 <label> Email - </label>
-<input id ="Email" placeholder="yourname@my.jcu.edu.au" type="text" size="50">
+<input id ="Email" placeholder="yourname@my.jcu.edu.au" type="text" size="30" style="font-size:16pt">
 </div>
 
 <div>
 <label> Contact No.- </label>
-<input id ="Contact" placeholder="Enter Contact No." type="text" size="50">
+<input id ="Contact" type="text" size="30" style="font-size:16pt">
 </div>
 <br>
 <!--    
@@ -65,7 +66,7 @@
 -->
 <div>
 <label> Purpose of the Appointment - </label>
-<textarea name="Reason" placeholder="Enter the reason for your appointment" type="text" rows="5" cols="50"></textarea>
+<textarea name="Reason"  type="text" rows="5" cols="52"></textarea>
 </div>
 <div id="SubmitButtons">
 

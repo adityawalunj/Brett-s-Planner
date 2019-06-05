@@ -102,7 +102,7 @@ $availarray = array_diff($frarray,$bkarray);
 
 
 //print_r($availarray);
-
+echo " <form action = register.php method = POST>";
 
 echo "<h2> Available time slots please select one to proceed booking </h2>";
 
@@ -116,6 +116,15 @@ echo "<option>$availval</option>";
 
 echo "</select>";
 
+
+echo "<input type=submit value=Confirm> </form> ";
+
+
+
+session_start();
+
+
+$_SESSION["d"] = $date;
 
 
 

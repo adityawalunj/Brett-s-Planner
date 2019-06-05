@@ -8,17 +8,11 @@
 
 body { 
 
- 
+  margin: 0;
 
   font-family: Arial, Helvetica, sans-serif;
 
-
-
-  background-image: url("Cityline.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-	background-position: center center;
-	position: relative;
+  background-image: url("7.jpg");
 
   background-color: #cccccc;
 
@@ -116,19 +110,23 @@ body {
 
 
 
-
-.holder {
+#Holder {
 
 	
 
+	width:356px;
 
-	background-color: rgba(124,19,19,0.26);
-    width: 100%;
-	
-	
+	height: 430px;
 
+	margin: 11px auto;
 
+	background-color: rgba(111,104,104,0.26);
 
+	padding: 10px;
+
+	align:center;
+
+	text-align: center;
 
 	
 
@@ -170,27 +168,31 @@ body {
 
 #mainselection {
 
-	padding:20px 30px 30px; 
+	margin-left:270px;
 
    overflow:hidden;
 
-   width:;
+   width:350px;
 
-   
+   -moz-border-radius: 9px 9px 9px 9px;
 
-   
+   -webkit-border-radius: 9px 9px 9px 9px;
+
+   border-radius: 9px 9px 9px 9px;
+
+   box-shadow: 1px 1px 11px #330033;
+
+   background: rgba(96,95,95,0.61) url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 319px center;
 
 	
 
 }
 
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
 
 
-@media screen and (min-width: 768px) {
+
+@media screen and (max-width: 500px) {
 
   .header a {
 
@@ -206,15 +208,6 @@ body {
 
   }
 
-	.holder
-	{
-		width: 100%;
-		float: none;
-		text-align: center;
-		padding: 2px;
-		
-	}
-
   
 
   .header-right {
@@ -222,30 +215,8 @@ body {
     float: none;
 
   }
-	  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
 
 }
-
-/* Create three unequal columns that floats next to each other */
-
-
-
-
-
-
-
 
 
 
@@ -265,20 +236,15 @@ body {
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 
-@media screen and ( min-width : 600px ){
+@media screen and (max-width: 600px) {
 
-   .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
+  .column.side, .column.middle {
+
+    width: 100%;
+
+  }
+
+}
 
 	
 
@@ -299,3 +265,4 @@ body {
 	border-radius: 0px;
 
 }
+
