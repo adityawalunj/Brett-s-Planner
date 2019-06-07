@@ -19,7 +19,7 @@
     
 	<ul class ="nav-area">
     <li><a href="Home.html">Home</a></li>
-    <li><a href="check_availability1.html">Availability</a></li>
+    
     <li><a href="Book.html">Book Appointment</a></li>
     <li><a href="managebookings.html">Manage Bookings</a></li>
     <li><a href="aboutus.html">About</a></li>
@@ -36,7 +36,8 @@ require "config.php";
 $man_id=$_GET['man'];
 $count=$dbo->prepare("DELETE FROM Bookings WHERE b_id=$man_id");
 $count->execute();
-echo "<h1>Your booking is cancelled sucessfully</h1>";
+<p style="font-size:15px; font-color: green;"><?php echo "<br><br><br><br><br><br>Your booking is cancelled sucessfully" ; ?> </p>
+
 ?>
     
     </header>

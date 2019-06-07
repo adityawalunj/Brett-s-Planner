@@ -1,7 +1,7 @@
 // JavaScript Document
 //Aditya Walunj
 
-<script>
+
     
 function validate()
 {
@@ -53,4 +53,4 @@ function validate()
     }
     return true;
 } 
-    </script>
+  

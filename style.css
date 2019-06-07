@@ -14,7 +14,7 @@
 
 
 .wrapper {
-	width: 1170px;
+	width: auto;
 	margin: auto;
 	
 }
@@ -112,9 +112,9 @@ form
 /* Form alignment */
 
 label {
+
 	float:left;
 	width:150px;
-	text-align:right;
 	padding-right: 12px;
 	margin-top: 10px;
 	clear: left;
@@ -133,7 +133,7 @@ input, textarea {
 	
 
 #SubmitButtons {
-	margin-left:250px;
+	margin-left:220px;
 	padding: 15px;
 	
 	
@@ -273,6 +273,55 @@ manageform {
     margin: 0 auto;
 }
 
+enterbook {
+    
+    margin-top: 100px;
+}
+
+#test{
+    
+position:absolute;
+top:100px;
+width:400px;
+margin-top:130px;
+
+}
+
+@media screen and (max-width: 992px) {
+  .welcome-text {
+    width: 100%;
+    top: 200px;
+    margin: 0px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .welcome-text {
+    width: 100%;
+    top: 200px;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 140vh;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  header {
+   height: 170vh;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px){
+  header {
+   height: 170vh;
+  }
+}
 /*
   
   font-size: 30px;
@@ -283,7 +332,6 @@ manageform {
   border-radius: 50%;
   
 }
-
 fa {
 	
   padding: 20px;
@@ -296,34 +344,27 @@ fa {
   border-radius: 50%;
   
 }
-
-
 }
 .footer-icons ul li {
   background: #3B5998;
   color: white;
 }
-
 .fa-twitter {
   background: #55ACEE;
   color: white;
 }
-
 .fa-google {
   background: #dd4b39;
   color: white;
 }
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-
 .fa-youtube {
   background: #bb0000;
   color: white;
 }
-
 .fa-instagram {
   background: #125688;
   color: white;

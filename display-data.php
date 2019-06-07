@@ -47,7 +47,7 @@ $date=$date->format('Y-m-d');
 
 //echo $date;
 
-$sql="select * from Bookings where b_date ='$date'";
+$sql="select * from Bookings where b_date ='$date' AND b_type='student'";
 
 echo "<table width=2000>";
 

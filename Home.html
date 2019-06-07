@@ -14,16 +14,131 @@
 <header>
 <div class = "wrapper">
 	<div class = "logo">
-    <img src = "JCUB.png" alt="JCU Campus Logo">
+        <a href="https://www.jcub.edu.au/"><img src = "JCUB.png" alt="JCU Campus Logo"></a>
     
     </div>
+
+    <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>    
+    <ul class ="nav-area">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Book.html">Book Appointment</a></li>
+    <li><a href="managebookings.html">Manage Bookings</a></li>
+    <li><a href="aboutus.html">About</a></li>    
+    </ul>
+    </div>
+    <a class="menutoggle" onclick="openNav()">&#9776;</a>
+    <div class ="welcome-text">
+    <h1> Book an Appointment with Brett Vance</h1>
+    <a href="Book.html">Book Now</a>
+    </div>
+ 
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+<style>
+    
+    #mySidenav{
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+    }
+    .closebtn, .menutoggle{display:none;
+    }
+    
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+@media only screen and (max-width: 600px) {
+
+    #mySidenav{
+        
+        width: 0;
+        background-color:#000;
+        height:100%;
+        z-index: 1111;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block !important;
+      transition: 0.3s;
+    }
+    .closebtn, .menutoggle{display:block;
+    }
+    .nav-area li{
+        display:block;
+        padding-bottom:10px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    #mySidenav{
+        
+        width: 0;
+        background-color:#000;
+        height:100%;
+        z-index: 1111;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block !important;
+      transition: 0.3s;
+    }
+    .closebtn, .menutoggle{display:block;
+    }
+    .nav-area li{
+        display:block;
+        padding-bottom:10px;
+    }
+
+}
+
+
+.menutoggle {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    float: right;
+    right: 10PX;
+}
+
+</style>
     
 	<ul class ="nav-area">
     <li><a href="Home.html">Home</a></li>
-    <li><a href="check_availability1.html">Availability</a></li>
+    
     <li><a href="Book.html">Book Appointment</a></li>
-    <li><a href="aboutus.html">About</a></li>
-    <li><a href="managebookings.html">Manage Bookings</a></li>    
+    <li><a href="managebookings.html">Manage Bookings</a></li>
+    <li><a href="aboutus.html">About</a></li>    
     </ul>
     </div>
     
