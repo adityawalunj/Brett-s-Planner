@@ -131,3 +131,12 @@ Stack trace:
 [01-Jun-2019 20:35:14 CST6CDT] PHP Parse error:  syntax error, unexpected 'value' (T_STRING), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/avail_process.php on line 162
 [01-Jun-2019 20:38:04 CST6CDT] PHP Parse error:  syntax error, unexpected 'value' (T_STRING), expecting ',' or ';' in /home/ictatjcu/public_html/portal/view_admin/avail_process.php on line 162
 [01-Jun-2019 20:40:51 CST6CDT] PHP Parse error:  syntax error, unexpected '>' in /home/ictatjcu/public_html/portal/view_admin/avail_process.php on line 162
+[04-Jun-2019 05:43:39 CST6CDT] PHP Parse error:  syntax error, unexpected '$NAME' (T_VARIABLE) in /home/ictatjcu/public_html/portal/view_admin/check.php on line 711
+[04-Jun-2019 05:46:09 CST6CDT] PHP Parse error:  syntax error, unexpected '$NAME' (T_VARIABLE) in /home/ictatjcu/public_html/portal/view_admin/check.php on line 711
+[04-Jun-2019 06:32:07 CST6CDT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ictatjcu/public_html/portal/view_admin/register.php on line 10
+[04-Jun-2019 06:46:42 CST6CDT] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/ictatjcu/public_html/portal/view_admin/register.php on line 52
+[05-Jun-2019 04:55:43 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/ictatjcu/public_html/portal/view_admin/reshedule_process.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/ictatjcu/public_html/portal/view_admin/reshedule_process.php on line 27
+[06-Jun-2019 21:03:20 CST6CDT] PHP Parse error:  syntax error, unexpected 'color' (T_STRING), expecting ',' or ';' in /home/ictatjcu/public_html/portal/Update/new/view_admin/register.php on line 72

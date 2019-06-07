@@ -13,41 +13,194 @@
 <body>
 <header>
 <div class = "wrapper">
-	<div class = "logo">
-    <img src = "JCUB.png" alt="JCU Campus Logo">
+    <div class = "logo">
+    <a href="https://www.jcub.edu.au/"><img src = "JCUB.png" alt="JCU Campus Logo"></a>
     
     </div>
-    
-	<ul class ="nav-area">
+ </div>   
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>    
+    <ul class ="nav-area">
     <li><a href="Home.html">Home</a></li>
-    <li><a href="check_availability1.html">Availability</a></li>
     <li><a href="Book.html">Book Appointment</a></li>
     <li><a href="managebookings.html">Manage Bookings</a></li>
-    <li><a href="aboutus.html">About</a></li>
-        
+    <li><a href="aboutus.html">About</a></li>    
     </ul>
-    </div>
+ </div>   
+<a class="menutoggle" onclick="openNav()">&#9776;</a>
     
    
-    
+ <div class="manage">   
 <form id ="manageform" action = "selectp.php" method = "POST">
 <h2> Enter The Booking ID</h2>
-    <input type="text" name="man" size=30>
+    <input type="text" name="man" size=25 style="font-size:16pt">
 <h2> Enter Your Email ID</h2> 
-    <input type="email" name="email" size=30>
+    <input type="email" name="email" size=25 style="font-size:16pt">
 <br><br>
     <input type=submit value=Check> 
 </form>
-  
+ </div> 
+
+
+
 </header>
 
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<style>
+    .row{
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+     
+    .manage{
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .manage input {
+    width: 100%;
+    }
+    #mySidenav{
+        position: absolute;
+        width: 100%;
+        background-color: transparent;
+    }
+    .closebtn, .menutoggle{display:none;
+    }
+    
+    input, textarea {
+    margin-top: 13px;
+    width: 50%;
+   }
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+@media only screen and (max-width: 600px) {
+
+    #mySidenav{
+        
+        width: 0;
+        background-color:#000;
+        height:100%;
+        z-index: 1111;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block !important;
+      transition: 0.3s;
+    }
+    .closebtn, .menutoggle{display:block;
+    }
+    .nav-area li{
+        display:block;
+        padding-bottom:10px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    #mySidenav{
+        
+        width: 0;
+        background-color:#000;
+        height:100%;
+        z-index: 1111;
+    }
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block !important;
+      transition: 0.3s;
+    }
+    .closebtn, .menutoggle{display:block;
+    }
+    .nav-area li{
+        display:block;
+        padding-bottom:10px;
+    }
+
+}
+
+
+.menutoggle {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    float: right;
+    right: 10PX;
+}
+@media screen and (max-width: 450px) {
+  #RegForm{
+    
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #RegForm{
+    
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #RegForm{
+    
+    width: 100%;
+    height: 100%;
+  }
+}
+
+input[type=submit] {
+    border: 2px solid #333;
+    border-radius: 10%;
+    width: 100px;
+    height: 40px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    background: #fff;
+}
+input[type=reset] {
+    border: 2px solid #333;
+    border-radius: 10%;
+    width: 100px;
+    height: 40px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    background: #fff;
+}
+
+</style>
 
 
 <div class ="footer-main-div">
 <div class ="footer-icons">
 <ul>
-	
+    
     <li><a href="https://www.facebook.com/JCUBrisbane/" ><i class="fa fa-facebook"></i></a></li>
     <li><a href="https://twitter.com/jcubrisbane?lang=en" ><i class="fa fa-twitter"></i></a></li>
     <li><a href="https://www.instagram.com/jcubrisbane/?hl=en" ><i class="fa fa-instagram"></i></a></li>
@@ -57,7 +210,7 @@
 </div>
 <div class="footer-menu">
     <ul>
-    	<li><a href="Home.html">Home</a></li>
+        <li><a href="Home.html">Home</a></li>
         <li><a href="https://www.jcub.edu.au/">JCUB</a></li>
         <li><a href="https://www.jcub.edu.au/current-students/the-learning-hub/library/">Library</a></li>
         <li><a href="https://www.jcub.edu.au/about/staff/student-services/">Services</a></li>

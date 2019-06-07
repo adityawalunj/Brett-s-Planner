@@ -92,8 +92,7 @@ else
 
 {
 
-echo "<h2> Please check the Booking id and Mail id </h2>
-<button><a href=manage1.php>Back to Manage Booking</a></button>";
+echo "<h3 style=color:#FFFF00> Please check the Booking id and Mail id </h3>";
 
 
 
